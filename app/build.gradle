@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 //制作补丁时将这个打开，auto-patch-plugin紧跟着com.android.application
-//apply plugin: 'auto-patch-plugin'
-apply plugin: 'robust'
+apply plugin: 'auto-patch-plugin'
+//apply plugin: 'robust'
 
 
 //compile 'com.meituan.robust:robust:0.4.99'
@@ -9,7 +9,7 @@ apply plugin: 'robust'
 
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 28
     buildToolsVersion "30.0.2"
 
     signingConfigs {
@@ -24,7 +24,7 @@ android {
     defaultConfig {
         applicationId "com.example.robustdemo"
         minSdkVersion 15
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -50,6 +50,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.android.support:appcompat-v7:28.3.1'
+    implementation 'com.android.support:design:28.4.0'
 
     implementation 'com.meituan.robust:robust:0.4.99'
 }
